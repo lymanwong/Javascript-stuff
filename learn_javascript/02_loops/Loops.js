@@ -11,10 +11,20 @@ function repeat(word, count){
 };
 
 
-function join(array){
-  var a = ''
-  for(var i = 0; i < array.length; i++){
-    a += array[i]
+function join(array, delimiter){
+  var words = '';
+  delimiter = delimiter || 0
+  if (array.length == 0){
+    return "";
   }
-  return a
+  else if (delimiter == 0){
+    words = array.toString().replace(/,/g , '');
+  }
+  else {
+    // for(var i = 0; i < array.length; i++) {
+    //   words += array[i] + delimiter;
+    // }
+    words = array.toString().replace(/,/g , delimiter);
+  }
+  return words;
 };
