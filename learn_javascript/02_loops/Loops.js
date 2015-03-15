@@ -4,9 +4,9 @@ function repeat(word, count){
   } else {
     var a = ''
     for(var i = 0; i < count; i++){
-      a += word
+      a += word;
     };
-    return a
+    return a;
   }
 };
 
@@ -21,10 +21,15 @@ function join(array, delimiter){
     words = array.toString().replace(/,/g , '');
   }
   else {
-    // for(var i = 0; i < array.length; i++) {
-    //   words += array[i] + delimiter;
-    // }
     words = array.toString().replace(/,/g , delimiter);
   }
   return words;
+};
+
+function sum(array){
+  total = 0
+  for(var i = 0; i < array.length; i++){
+    total += parseInt(array[i]);
+  };
+  return total;
 };
