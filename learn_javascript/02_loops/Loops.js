@@ -33,3 +33,16 @@ function sum(array){
   };
   return total;
 };
+
+function paramify(hash){
+  var array = [];
+  if (Object.keys(hash).length>0){
+    for(var key in hash) {
+      array.push(key + "=" + hash[key]);
+    }
+    return (array.sort().join("&"));
+  }
+  else {
+    return("");
+  };
+};
