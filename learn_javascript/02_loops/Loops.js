@@ -10,7 +10,6 @@ function repeat(word, count){
   }
 };
 
-
 function join(array, delimiter){
   var words = '';
   delimiter = delimiter || 0
@@ -45,4 +44,17 @@ function paramify(hash){
   else {
     return("");
   };
+};
+
+function factorial(num){
+  var total = 1;
+  if(num == 0){
+    total;
+  }
+  else {
+    for(var i = 1; i <= num; i++){
+      total *= i;
+    }
+  }
+  return (total);
 };
