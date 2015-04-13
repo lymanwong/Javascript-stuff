@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>10. Global scope vs function scope</title>
+  <script type="text/Javascript">
+
+  myScope = "global";
+/*
+  //Example 1:
+  if(true){
+    var x = 5;
+  }
+  alert(x);
+
+  //Example 2:
+  myScope = "global"; //can be seen inside and outside the function since it's a global variable(without var)
+
+  (function(){
+    var myScope = "function"; //can only be seen inside the anonomyous function
+    alert("inside the function, the scope is: " + myScope);
+  })();
+
+    alert("outside the function, the scope is: " + myScope); //this line is ignored if undefined
+
+  //Example 3: hoisting - myScope is moved to the top so it's accessible by the entire function
+  (function(){
+    if (true){
+      var myScope = "function";
+    }
+    alert('inside the function, the scope is: ' + myScope);
+  })();
+*/
+
+  //Example 4: DOM - Global variables belongs to the top most level of the DOM...window
+  alert('window.myScope: ' + window.myScope);
+
+
+  </script>
+</head>
+<body>
+  <h1>10. Global scope vs function scope</h1>
+</body>
+</html>
