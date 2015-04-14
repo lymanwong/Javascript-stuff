@@ -9,7 +9,7 @@ $(function(){
   //   $('#main').append('you should only see this if you click the plus');
   // });
 
-  $('#main').append("<img src="plus-8.png" alt="click me to see the paragraph" id='clickme' />");
+  $('#main').append("<img src='plus-8.png' alt='click me to see the paragraph' id='clickme' />");
 
 
   $('#clickme').toggle(function(){
