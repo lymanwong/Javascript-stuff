@@ -20,7 +20,7 @@ instructions = [1,2,4,3,5]
 //   var sorted_instructions = instructions.sort(function(a,b){
 //     return a-b;
 //   })
-//   return sorted_instructions.reverse().join(" ") + " liftoff";
+//   return sorted_instructions.reverse().join(" ") + " liftoff!";
 // };
 
 //=================================
@@ -28,7 +28,7 @@ instructions = [1,2,4,3,5]
 //refactored
 
 function liftoff(instructions) {
-  return instructions.sort(function(a,b){return a-b;}).reverse().join(" ") + " liftoff";
+  return instructions.sort(function(a,b){return a-b;}).reverse().join(" ") + " liftoff!";
 };
 
 debug(liftoff([8,1,10,2,7,9,6,3,4,5]));
