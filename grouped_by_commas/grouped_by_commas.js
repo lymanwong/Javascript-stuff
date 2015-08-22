@@ -14,5 +14,27 @@ Assume: 0 <= n < 1000000000
 */
 
 function groupedByCommas(number){
+  var reverse_num = number.toString().split("").reverse().join("");
+  var num_commas = Math.ceil((number.toString().length/3)-1)
+  var num_arr = (""+number).split("").reverse();
+  if (num_commas === 0){
+    return(number)
+  }
+  else if (num_commas === 1){
+      var newnum = reverse_num.toString().slice(0,3) + "," + reverse_num.toString().slice(3);
+  }
+  else {
+    var newnum = reverse_num.toString().slice(0,3) + "," + number.toString().slice(3,6) + "," + reverse_num.toString().slice(6);
+  }
+  return newnum.split("").reverse().join("");
+};
 
-}
+
+debug(groupedByCommas(1));
+debug(groupedByCommas(12));
+debug(groupedByCommas(123));
+debug(groupedByCommas(1234));
+debug(groupedByCommas(12345));
+debug(groupedByCommas(123456));
+debug(groupedByCommas(12345678));
+debug(groupedByCommas(123456789));
