@@ -3,19 +3,20 @@ i.e. the result of exponentiation with number two as the base and integer n as t
 I.e. 1024 is a power of two: it 2^10.
 */
 
-var isPowerOfTwo = function(number){
+function isPowerOfTwo(number){
   var counter = 0;
   //if(number%2 === 0){
-    while(number >= 0){
-      number /= 2;
+  while(number >= 0){
+      number/=2;
       counter += 1;
+      debug(number)
    }
   // } else {
   //   print("False");
   // };
-  print(counter);
+  return(counter);
 };
 
 
-isPowerOfTwo(4096) // -> true
+debug(isPowerOfTwo(4096)) // -> true
 // isPowerOfTwo(333)  // -> false
