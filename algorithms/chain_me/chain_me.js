@@ -13,3 +13,17 @@ chain(2, [add, mult]);
 // returns 90;
 */
 
+function chain(number, functions){
+
+function add(x){
+  return x + 1;
+}
+
+function mult(x){
+  return x * 30;
+}
+add();
+//mult();
+}
+
+debug(chain(2)) // 90
