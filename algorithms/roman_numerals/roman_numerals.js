@@ -10,15 +10,32 @@ function convert(num) {
   num = num.toString().split('');
   while(num.length > 0){
     if(num.length == 4) {
-      console.log("thousands");
-      num.shift();
+      if(num[0] >= 1 && num[0] <= 3){
+        romanNumerals += ("M").repeat(num[0]);
+        num.shift();
+      }
     }
     else if(num.length == 3) {
-      console.log("hundreds");
-      num.shift();
+      if(num[0] == 0) {
+        num.shift();
+      }
+      else if (num[0] == 5){
+        romanNumerals += ("D");
+        num.shift();
+      }
+      else if (num[0] >= 6 && num[0] <= 8){
+        romanNumerals += ("D") + ("C").repeat(num[0]-5);
+        num.shift();
+      } else {
+        romanNumerals += ("CM");
+        num.shift();
+      }
     }
     else if(num.length == 2) {
-      if(num[0] >=1 && num[0] <=3) {
+      if(num[0] == 0){
+        num.shift();
+      }
+      else if (num[0] >=1 && num[0] <=3) {
         romanNumerals += ("X").repeat(num[0]);
         num.shift();
       }
@@ -39,7 +56,10 @@ function convert(num) {
       }
     }
     else {
-      if(num >=1 && num <= 3) {
+      if (num == 0) {
+        num.shift();
+      }
+      else if (num >=1 && num <= 3) {
         romanNumerals += ("I").repeat(num);
         num.shift();
       }
@@ -51,7 +71,7 @@ function convert(num) {
         romanNumerals += "V" + ("I").repeat(num-5);
         num.shift();
       } else {
-        romanNumerals += ("I") + ("X")
+        romanNumerals += ("I") + ("X");
         num.shift();
       }
     }
@@ -69,15 +89,15 @@ function convert(num) {
 //console.log(convert(68)); // "LXVIII"
 //console.log(convert(83)); // "LXXXIII"
 //console.log(convert(97)); // "XCVII"
-//console.log(convert(99)); // "XCIX"
-//console.log(convert(500)); // "D"
-//console.log(convert(501)); // "DI"
-//console.log(convert(649)); // "DCXLIX"
-//console.log(convert(798)); // "DCCXCVIII"
-//console.log(convert(891)); // "DCCCXCI"
-//console.log(convert(1000)); // "M"
-//console.log(convert(1004)); // "MIV"
-//console.log(convert(1006)); // "MVI"
-//console.log(convert(1023)); // "MXXIII"
-//console.log(convert(2014)); // "MMXIV"
+// console.log(convert(99)); // "XCIX"
+console.log(convert(500)); // "D"
+// console.log(convert(501)); // "DI"
+// console.log(convert(649)); // "DCXLIX"
+// console.log(convert(798)); // "DCCXCVIII"
+// console.log(convert(891)); // "DCCCXCI"
+// console.log(convert(1000)); // "M"
+// console.log(convert(1004)); // "MIV"
+// console.log(convert(1006)); // "MVI"
+// console.log(convert(1023)); // "MXXIII"
+// console.log(convert(2014)); // "MMXIV"
 //console.log(convert(3999)); // "MMMCMXCIX"
