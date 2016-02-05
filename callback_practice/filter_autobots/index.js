@@ -24,3 +24,5 @@ function getAutobots (filepath, done) {
 getAutobots('autobots.txt', function(err, autobots){
   console.log(autobots);
 })
+
+//[ 'optimus prime','bumblebee','jazz','ultra magnus','metroplex','omega supreme','grimlock','mirage','' ]
