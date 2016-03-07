@@ -6,9 +6,10 @@ echo '<response>';
   $hero = ucwords($_GET['hero']);
   $heroArray = array('Captain America', 'Spiderman', 'Superman', 'Batman', 'Aquaman', 'Robin', 'Flash');
   if(in_array($hero, $heroArray))
-    echo 'We do have '.$hero.' comics!';
+    echo 'We have '.$hero.' comics!';
   elseif($hero == '')
     echo 'Enter a hero name.';
+
   else
     echo 'Sorry, we do not have '.$hero.' comics.';
 echo '</response>';
