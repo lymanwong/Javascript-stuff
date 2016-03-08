@@ -12,7 +12,15 @@ $(document).ready(function() {
   //reset txt entry field to be empty so prv entry does not stay
   input.val('');
 
-  console.log(value);
+  // console.log(value);
+
+  //send data via ajax
+  var request = $.ajax({
+    method: 'post',
+    url: '/todos',
+    data: {todo_item: value},
+
+  })
 
   });
 });
