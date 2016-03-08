@@ -13,7 +13,8 @@ post '/todos' do
  $todos << params[:todo_item]
 
  if request.xhr? #if AJAX
-  $todos.to_json
+  # $todos.to_json
+  return erb :"_items_list", layout: false
  else
   redirect to ('/')
  end

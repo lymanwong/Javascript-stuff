@@ -28,18 +28,21 @@ $(document).ready(function() {
   //Goal: re-render part of the page with new data
 
     //parse response into an array of todo items
-    var items = JSON.parse(response);
+    // var items = JSON.parse(response);
 
     //find the ul
-    var ul = $('.todo-items');
+    // var ul = $('.todo-items');
 
     //empty ul
-    ul.html('');
+    // ul.html('');
 
     //populate ul with new lis from our list
-    var html = items.forEach(function(item){
-      $('<li>').text(item).appendTo(ul);
-    });
+    // var html = items.forEach(function(item){
+    //   $('<li>').text(item).appendTo(ul);
+    // });
+
+    //version 2
+    $('.todo-items').replaceWith(response)
   });
   });
 });

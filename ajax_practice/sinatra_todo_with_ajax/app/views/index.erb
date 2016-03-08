@@ -3,8 +3,4 @@
   <input type="submit" value="add" />
 </form>
 
-<ul class="todo-items">
-  <% $todos.each do |todo| %>
-    <li><%= todo %></li>
-  <% end %>
-</ul>
+<%= erb :"_items_list" %>
