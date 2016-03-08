@@ -1,4 +1,15 @@
+require 'sinatra'
+require 'json'
+# require 'pry-debugger'
+
+#using a global var to mimic a call to an ActiveRecord db
+$todos = []
+
 get '/' do
-  # Look in app/views/index.erb
   erb :index
+end
+
+post '/todos' do
+ $todos << params[:todo_item]
+ redirect '/'
 end
