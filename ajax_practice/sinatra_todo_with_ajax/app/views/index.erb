@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Sinatra-Ajax Todo</title>
-</head>
-<body>
-  <form action="/todos" method="post">
-    <input type="text" name="todo_item" placeholder="Stuff to do" />
-    <input type="submit" value="add" />
-  </form>
+<form class="add-todo-form" action="/todos" method="post">
+  <input type="text" name="todo_item" placeholder="Stuff to do" />
+  <input type="submit" value="add" />
+</form>
 
-  <ul>
-    <% $todos.each do |todo| %>
-      <li><%= todo %></li>
-    <% end %>
-  </ul>
-</body>
-</html>
+<ul>
+  <% $todos.each do |todo| %>
+    <li><%= todo %></li>
+  <% end %>
+</ul>

@@ -11,5 +11,5 @@ end
 
 post '/todos' do
  $todos << params[:todo_item]
- redirect '/'
+ redirect to ('/')
 end
