@@ -11,5 +11,10 @@ end
 
 post '/todos' do
  $todos << params[:todo_item]
- redirect to ('/')
+
+ if request.xhr? #if AJAX
+  $todos.to_json
+ else
+  redirect to ('/')
+ end
 end
