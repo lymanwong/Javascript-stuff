@@ -7,7 +7,24 @@ array, containing the names of people who like an item. It must return the
 display text as shown in the examples:*/
 
 function likes(names) {
-  // TODO
+	var names_length = names.length;
+	var ending = " likes this"
+	var ending2 = " like this"
+	if (names_length == 0) {
+		return 'no one likes this';
+	} 
+	else if (names_length == 1) {
+		return names[0] + ending;
+	}
+	else if (names_length == 2) {
+		return names[0] + " and " + names[1] + ending2;
+	}
+	else if (names_length == 3) {
+		return names[0] + ", " + names[1] + " and " + names[2] + ending2; 
+	}
+	else {
+		return names[0] + ", " + names[1] + " and " + names[2] + " and " + (names_length - 2) + " others" + ending2;
+	}
 }
 
 debug(likes([])); //'no one likes this'
