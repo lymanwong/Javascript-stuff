@@ -11,7 +11,7 @@ function likes(names) {
 	var ending = " likes this"
 	var ending2 = " like this"
 	if (names_length == 0) {
-		return 'no one likes this';
+		return 'no one' + ending;
 	} 
 	else if (names_length == 1) {
 		return names[0] + ending;
