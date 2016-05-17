@@ -23,7 +23,7 @@ function likes(names) {
 		return names[0] + ", " + names[1] + " and " + names[2] + ending2; 
 	}
 	else {
-		return names[0] + ", " + names[1] + " and " + names[2] + " and " + (names_length - 2) + " others" + ending2;
+		return names[0] + ", " + names[1] + " and " + " and " + (names_length - 2) + " others" + ending2;
 	}
 }
 
