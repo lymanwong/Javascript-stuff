@@ -9,7 +9,8 @@ Math.floor()
 */
 
 Math.round = function(number) {
-  return 0; // TODO: fix this
+	var stringNumber = number.toString();
+	return stringNumber.indexOf(".");
 };
 
 Math.ceil = function(number) {
@@ -19,3 +20,12 @@ Math.ceil = function(number) {
 Math.floor = function(number) {
   return 0; // TODO: fix this
 };
+
+debug(Math.round(0.4)); //0
+//Math.round(0.5); //1
+
+// Math.ceil(0.4); //1
+// Math.ceil(0.5); //1
+
+// Math.floor(0.4); //0
+// Math.floor(0.5); //0
