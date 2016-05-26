@@ -10,7 +10,12 @@ Math.floor()
 
 Math.round = function(number) {
 	var stringNumber = number.toString();
-	return stringNumber.indexOf(".");
+	var decimalLocation = stringNumber.indexOf(".");
+	var wholeNumbers = stringNumber.slice(0,decimalLocation);
+	var decimalNumbers = stringNumber.slice(decimalLocation + 1, stringNumber.length);
+	if (decimalNumbers >= 5) {
+		return parseInt(wholeNumbers) + 1;
+	} else { return parseInt(wholeNumbers); }
 };
 
 Math.ceil = function(number) {
@@ -22,7 +27,7 @@ Math.floor = function(number) {
 };
 
 debug(Math.round(0.4)); //0
-//Math.round(0.5); //1
+debug(Math.round(0.5)); //1
 
 // Math.ceil(0.4); //1
 // Math.ceil(0.5); //1

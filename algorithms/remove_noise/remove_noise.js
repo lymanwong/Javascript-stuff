@@ -15,7 +15,7 @@ returns hello world
 
 function removeNoise(str){
 	// write your code below
-	debug (str.replace(/[^\w\s]/gi, ''));
+	debug (str.replace(/[%$&/#·@|º\ª]/gi, ''));
 }
 
 
