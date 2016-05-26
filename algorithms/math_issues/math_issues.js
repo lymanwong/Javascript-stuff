@@ -15,7 +15,9 @@ Math.round = function(number) {
 	var decimalNumbers = stringNumber.slice(decimalLocation + 1, stringNumber.length);
 	if (decimalNumbers >= 5) {
 		return parseInt(wholeNumbers) + 1;
-	} else { return parseInt(wholeNumbers); }
+	} else { 
+		return parseInt(wholeNumbers); 
+	}
 };
 
 Math.ceil = function(number) {
@@ -28,6 +30,9 @@ Math.floor = function(number) {
 
 debug(Math.round(0.4)); //0
 debug(Math.round(0.5)); //1
+debug(Math.round(0.6)); //1
+debug(Math.round(2.5)); //3
+debug(Math.round(4.4)); //4
 
 // Math.ceil(0.4); //1
 // Math.ceil(0.5); //1
