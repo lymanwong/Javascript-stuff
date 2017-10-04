@@ -14,7 +14,9 @@ var twoSum = function(nums, target) {
   var result = [];
   for(var i = 0; i < nums.length; i++ ) { //grab each number from nums
     for(var j = 1; j < nums.length; j++) { //loop over nums again
-      if(nums[i] + nums[j] == target) { //add numbers to see if it equals the target
+      if(nums.length == 2 && nums[i] + nums[j] == target){
+        return ([i,j]);
+      } else if(nums[i] + nums[j] == target) { //add numbers to see if it equals the target
         var collectionArray = []; //create a new array to collect true
         collectionArray.push(i,j);  //add the numbers to the collection array
         collectionArray.sort(); //sort the collection array so that the same pairs line up next to each other
@@ -38,11 +40,17 @@ var twoSum = function(nums, target) {
     newArr = newArr.concat(result[l]); //make the nested array into just an array
     return (newArr); //spit out the newly formatted array
     }
+    else if (result[l][0] == result[l][1]) {
+        result.splice(l);
+    return (result[0]); //spit out the newly formatted array
+    }
   }
   return(result); //return the nested array
 };
 
-
+console.log(twoSum([2,5,5,11], 10)) //[1,2]
+console.log(twoSum([3,2,3], 6)) //[0,2]
+console.log(twoSum([3,3], 6)); //[0,1]
 console.log(twoSum([2, 7, 11, 15], 9)); //[1,2]
 console.log(twoSum([2, 5, 8, 1, 4, 6, 9, 3, 7], 9)); //[ [ 0, 8 ], [ 1, 4 ], [ 5, 7 ] ]
 console.log(twoSum([3,2,4], 6)); //[1,2]
